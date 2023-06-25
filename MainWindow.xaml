@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="WpfApp7.MainWindow"
+        Title="TCP Client" Height="350" Width="525"
+        Closing="Window_Closing">
+        
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Column="1" Content="отправить" HorizontalAlignment="Center" Height="54" Grid.Row="1" VerticalAlignment="Center" Width="180" Click="Button_Click"/>
+        <ListBox x:Name="MessageLbx" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="81"  Margin="4,1,0,0" />
+        <TextBox x:Name="MessageTxt" HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" VerticalAlignment="Center" Width="108" Margin="76,0,0,0" Grid.Row="1"/>
+        <ListBox x:Name="clients" av:ItemsSource="{av:SampleData ItemCount=5}" Margin="94,-1,13,8" Grid.ColumnSpan="2"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Margin="24,20,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_1"/>
+    </Grid>
+    
+</Window>
